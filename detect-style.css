@@ -1,0 +1,153 @@
+html, body {
+    background-color: #e2e1e0;;
+    color: white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+body video {
+    transition: filter 250ms linear;
+}
+
+body.loading video {
+    filter: grayscale(1) brightness(0.25);
+}
+
+body.loading:before {
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    z-index: 100;
+}
+
+html, body, video, canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+video, canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 150px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+#fps {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+#fps:empty {
+    display: none;
+}
+
+#fps:after {
+    content: " fps";
+}
+
+
+
+
+#video-container {
+    position: relative;
+    /* display: inline-block; */
+   
+}
+
+
+/* 화면고정 */
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+ /* kdw psh
+ #text-overlay {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+} */
+
+/* KDW👨🏻‍🎓 PSH👨🏻‍🎓 */
+h1 {
+    color: black;
+    position: relative; /* position을 relative로 설정합니다. */
+    left: 195px;
+    bottom: -10px; /* 왼쪽으로 20px 이동합니다. */
+    font-family: 'Gothic A1', sans-serif; 
+}
+
+/* 환율 계산결과 */
+#results-container {
+    position: absolute;
+    bottom: 0;
+    top: 830px;
+    width: 550px;
+    height: 170px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    left: 45px; /* 왼쪽 여백을 0으로 설정 */
+    font-size: 35px;
+    z-index: 3;
+    font-family: 'Gothic A1', sans-serif;
+    /* 수직 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 150px; /* 컨테이너 높이와 동일하게 설정 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+}
+
+/* 네모 */
+#rectangle {
+    position: absolute; /* position을 absolute로 변경 */
+    top: 870px; /*올릴 수록 화면에서 내려감*/
+    left: 0;
+    width: 640px;
+    height: 500px;
+    background-color: #e2e1e0;
+    z-index: 1;
+}
+
+ /* 그위 네모 */
+/* #rectangle2 {
+    position: absolute; 
+    top: 900px; 
+    left: 50px;
+    width: 550px;
+    height: 130px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+} */
+/* @media screen and (max-height: 1100px) {
+    html, body {
+        background-color: hsl(30, 94%, 50%);;
+    }
+} */
